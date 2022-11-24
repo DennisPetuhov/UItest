@@ -7,8 +7,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.ui.R
+import com.example.ui.presentetion.Navigator.BaseFragment
 
-class PhonesFragment : Fragment() {
+class PhonesFragment : BaseFragment()  {
 
     companion object {
         fun newInstance() = PhonesFragment()
