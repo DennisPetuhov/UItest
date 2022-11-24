@@ -8,24 +8,24 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.ui.R
 
-class Home : Fragment() {
+class PhonesFragment : Fragment() {
 
     companion object {
-        fun newInstance() = Home()
+        fun newInstance() = PhonesFragment()
     }
 
-    private lateinit var viewModel: HomeViewModel
+    private lateinit var viewModel: PhonesFragmentViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_home, container, false)
+        return inflater.inflate(R.layout.fragment_phones, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(HomeViewModel::class.java)
+        viewModel = ViewModelProvider(this).get(PhonesFragmentViewModel::class.java)
         // TODO: Use the ViewModel
     }
 

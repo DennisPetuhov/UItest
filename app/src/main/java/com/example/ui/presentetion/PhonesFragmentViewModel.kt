@@ -2,6 +2,6 @@ package com.example.ui.presentetion
 
 import androidx.lifecycle.ViewModel
 
-class HomeViewModel : ViewModel() {
+class PhonesFragmentViewModel : ViewModel() {
     // TODO: Implement the ViewModel
 }

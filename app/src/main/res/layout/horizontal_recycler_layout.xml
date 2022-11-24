@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mask_group"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentTop="true"
+    android:background="?android:attr/selectableItemBackgroundBorderless"
+    app:cardCornerRadius="10dp"
+    app:cardUseCompatPadding="true"
+    app:layout_constraintGuide_percent="50">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_in_card"
+        android:layout_width="match_parent"
+        android:layout_height="182dp"
+        android:background="#000000">
+
+
+        <ImageView
+            android:id="@+id/new_icon_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ellipse_9"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintHorizontal_bias="0.098"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.045" />
+
+        <TextView
+            android:id="@+id/new_icon_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal|top"
+            android:text="@string/new_icon"
+            android:textAppearance="@style/new_icon"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@id/new_icon_image"
+            app:layout_constraintEnd_toEndOf="@id/new_icon_image"
+            app:layout_constraintStart_toStartOf="@id/new_icon_image"
+            app:layout_constraintTop_toTopOf="@id/new_icon_image"
+            tools:text="NEW" />
+
+        <TextView
+            android:id="@+id/iphone_12"
+            android:layout_width="109dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="6dp"
+            android:background="@color/white"
+            android:text="@string/iphone_12"
+            app:layout_constraintBottom_toTopOf="@+id/s_per_mega_"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/s_per_mega_"
+            android:layout_width="91dp"
+            android:layout_height="13dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="5dp"
+
+            android:gravity="center_horizontal|top"
+            android:text="@string/s_per_mega_"
+            android:textAppearance="@style/s_per_mega_"
+            app:layout_constraintBottom_toTopOf="@+id/rectangle_8"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iphone_12"
+            tools:text="@string/s_per_mega_" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/rectangle_8"
+            android:layout_width="98dp"
+            android:layout_height="23dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="17dp"
+            android:background="@drawable/rectangle_8"
+            android:gravity="center_horizontal|top"
+            android:paddingStart="23dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="23dp"
+            android:paddingBottom="5dp"
+            android:text="@string/buy_now_"
+            android:textAppearance="@style/buy_now_"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/s_per_mega_"
+            app:strokeColor="#FFFFFF" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".40" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>
+
+
