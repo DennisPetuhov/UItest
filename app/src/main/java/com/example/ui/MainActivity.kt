@@ -62,5 +62,6 @@ class MainActivity : AppCompatActivity() {
             }
 
         }.attach()
+        binding.viewPager.isUserInputEnabled = false // выключение скрола свайпом
     }
 }

@@ -6,16 +6,23 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.inputmethod.InputBinding
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.ui.DATA.Api.Status
 import com.example.ui.R
+import com.example.ui.databinding.FragmentPhonesBinding
 import com.example.ui.presentetion.Navigator.BaseFragment
+import com.example.ui.presentetion.RecyclerAdapter.HorizontalRecyclerAdapter
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 
 class PhonesFragment : BaseFragment()  {
+    lateinit var binding: FragmentPhonesBinding
+    val adapter= HorizontalRecyclerAdapter()
 
     companion object {
         fun newInstance() = PhonesFragment()
@@ -27,7 +34,8 @@ class PhonesFragment : BaseFragment()  {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_phones, container, false)
+        binding = FragmentPhonesBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
@@ -35,6 +43,11 @@ class PhonesFragment : BaseFragment()  {
         viewModel = ViewModelProvider(this).get(PhonesFragmentViewModel::class.java)
         toRecycler()
         // TODO: Use the ViewModel
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        initRecycler()
     }
 
     fun toRecycler(){
@@ -48,9 +61,10 @@ class PhonesFragment : BaseFragment()  {
                             println(it.message)
                         }
                         Status.SUCCESS -> {
-                            it.data?.let { it1 ->
-                                println(it.data.bestSeller.toString())
-                                println("success")
+                            it.data?.let {
+                                it.homeStore?.let { it1 -> adapter.updateRecycler(it1.toMutableList()) }
+//                                println(it1.bestSeller.toString())
+//                                println("success")
                             }
                         }
                         Status.LOADING -> {
@@ -64,4 +78,13 @@ class PhonesFragment : BaseFragment()  {
 
     }
 
+
+
+    fun initRecycler() {
+
+
+        binding.horizontalRecycler.adapter = adapter
+        binding.horizontalRecycler.layoutManager = LinearLayoutManager(requireContext(),LinearLayoutManager.HORIZONTAL,false)
+
+    }
 }
