@@ -10,5 +10,5 @@ data class StoreResponse(
     @Json(name ="best_seller")
     val bestSeller: List<BestSeller>?,
     @Json(name ="home_store")
-    val home_store: List<HomeStore>?
+    val homeStore: List<HomeStore>?
 ):Parcelable

@@ -12,7 +12,6 @@ class ApiHelper {
         val moshi =Moshi.Builder().add(com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory()).build()
         val retrofit = Retrofit.Builder()
             .baseUrl(Companion.BASE_URL)
-            .addConverterFactory(GsonConverterFactory.create(gson))
             .addConverterFactory(MoshiConverterFactory.create(moshi))
             .build()
         val api: ApiService = retrofit.create(ApiService::class.java)
