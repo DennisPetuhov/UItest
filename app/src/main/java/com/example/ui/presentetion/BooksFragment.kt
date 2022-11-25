@@ -1,30 +1,31 @@
-package com.example.ui
+package com.example.ui.presentetion
 
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.ui.R
+import com.example.ui.presentetion.Navigator.BaseFragment
 
-class FirstFragment : Fragment() {
+class BooksFragment : BaseFragment() {
 
     companion object {
-        fun newInstance() = FirstFragment()
+        fun newInstance() = BooksFragment()
     }
 
-    private lateinit var viewModel: FirstFragmentViewModel
+    private lateinit var viewModel: BooksFragmentViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_first, container, false)
+        return inflater.inflate(R.layout.fragment_main, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(FirstFragmentViewModel::class.java)
+        viewModel = ViewModelProvider(this).get(BooksFragmentViewModel::class.java)
         // TODO: Use the ViewModel
     }
 

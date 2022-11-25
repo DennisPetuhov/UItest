@@ -2,30 +2,30 @@ package com.example.ui.presentetion
 
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.ui.R
+import com.example.ui.presentetion.Navigator.BaseFragment
 
-class Home : Fragment() {
+class ComputerFragment : BaseFragment()  {
 
     companion object {
-        fun newInstance() = Home()
+        fun newInstance() = ComputerFragment()
     }
 
-    private lateinit var viewModel: HomeViewModel
+    private lateinit var viewModel: ComputerFragmentViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_home, container, false)
+        return inflater.inflate(R.layout.fragment_home2, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(HomeViewModel::class.java)
+        viewModel = ViewModelProvider(this).get(ComputerFragmentViewModel::class.java)
         // TODO: Use the ViewModel
     }
 

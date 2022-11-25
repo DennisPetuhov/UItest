@@ -2,4 +2,14 @@
     <string name="app_name">UI</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="iphone_12">Iphone 12</string>
+    <string name="buy_now_">Buy now!</string>
+    <string name="s_per_mega_">Super.Mega.Rapido.</string>
+    <string name="new_icon">New</string>
+    <string name="hot_sales">Hot sales</string>
+    <string name="best_seller">Best Seller</string>
+    <string name="see_more">see more</string>
+    <string name="some_id">$1,047</string>
+    <string name="some_id1">$1,500</string>
+    <string name="samsung_gal">Samsung Galaxy s20 Ultra</string>
 </resources>

@@ -7,25 +7,26 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.ui.R
+import com.example.ui.presentetion.Navigator.BaseFragment
 
-class MainFragment : Fragment() {
+class PhonesFragment : BaseFragment()  {
 
     companion object {
-        fun newInstance() = MainFragment()
+        fun newInstance() = PhonesFragment()
     }
 
-    private lateinit var viewModel: MainViewModel
+    private lateinit var viewModel: PhonesFragmentViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_main, container, false)
+        return inflater.inflate(R.layout.fragment_phones, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
+        viewModel = ViewModelProvider(this).get(PhonesFragmentViewModel::class.java)
         // TODO: Use the ViewModel
     }
 
