@@ -49,7 +49,7 @@ class PhonesFragment : BaseFragment()  {
                         }
                         Status.SUCCESS -> {
                             it.data?.let { it1 ->
-                                println(it.data.bestSeller.toString())
+                                println(it.data.toString())
                                 println("success")
                             }
                         }

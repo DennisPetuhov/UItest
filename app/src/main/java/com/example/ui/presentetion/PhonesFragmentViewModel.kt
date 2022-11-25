@@ -18,12 +18,19 @@ import kotlinx.coroutines.launch
 class PhonesFragmentViewModel : BaseViewModel() {
     val api = ApiHelper().getInstanceOfRetrofit()
     val repo = RepositoryPhones(api)
-    val flow: StateFlow<StatusModel<StoreResponse>> get() = mutableFlow
+//    val flow: StateFlow<StatusModel<StoreResponse>> get() = mutableFlow
 
-    // var mutableFlow: MutableStateFlow<List<Movies>?> = MutableStateFlow(listOf())
-    var mutableFlow = MutableStateFlow(
+
+//
+//    var mutableFlow = MutableStateFlow(
+//        StatusModel(
+//            Status.LOADING, "", StoreResponse(listOf(), listOf())
+//        )
+//    )
+val flow: StateFlow<StatusModel<List<HomeStore>>> get() = mutableFlow
+   private var mutableFlow = MutableStateFlow(
         StatusModel(
-            Status.LOADING, "", StoreResponse(listOf(), listOf())
+            Status.LOADING, "",listOf(HomeStore() )
         )
     )
 
