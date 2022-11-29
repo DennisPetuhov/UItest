@@ -10,6 +10,7 @@ import com.example.ui.databinding.ActivityMainBinding
 import com.example.ui.presentetion.TabLayout.TabObject
 import com.example.ui.presentetion.TabLayout.TabObjectData
 import com.example.ui.presentetion.TabLayout.ViewPagerAdapter
+import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 val listOfTabs: List<TabObject> = TabObjectData.tabList
 class MainActivity : AppCompatActivity() {
@@ -63,5 +64,53 @@ class MainActivity : AppCompatActivity() {
 
         }.attach()
         binding.viewPager.isUserInputEnabled = false // выключение скрола свайпом
+
+        binding.tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener{
+            override fun onTabSelected(tab: TabLayout.Tab?) {
+                tab?.customView?.apply {
+                    findViewById<ImageView>(R.id.circle).setColorFilter(
+                        ContextCompat.getColor(
+                            this@MainActivity,
+                            R.color.orange
+                        )
+
+
+                    )
+                    findViewById<TextView>(R.id.textView).setTextColor(Color.parseColor("#FF6E4E"))
+                    findViewById<ImageView>(R.id.image_directory).setColorFilter(
+                        ContextCompat.getColor(
+                            this@MainActivity,
+                            R.color.white
+                        )
+                    )
+
+                }
+            }
+
+            override fun onTabUnselected(tab: TabLayout.Tab?) {
+                tab?.customView?.apply {
+                    findViewById<ImageView>(R.id.circle).setColorFilter(
+                        ContextCompat.getColor(
+                            this@MainActivity,
+                            R.color.white
+                        )
+
+
+                    )
+                    findViewById<TextView>(R.id.textView).setTextColor(Color.parseColor("#B3B3C3"))
+                    findViewById<ImageView>(R.id.image_directory).setColorFilter(
+                        ContextCompat.getColor(
+                            this@MainActivity,
+                            R.color.tab_layout_icon_color
+                        )
+                    )
+
+                }
+            }
+
+            override fun onTabReselected(tab: TabLayout.Tab?) {
+                TODO("Not yet implemented")
+            }
+        })
     }
 }

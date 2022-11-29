@@ -1,6 +1,7 @@
 package com.example.ui.presentetion.RecyclerAdapter
 
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
@@ -24,10 +25,27 @@ class HorizontalRecyclerAdapter : RecyclerView.Adapter<MyHomesViewHolder>() {
     override fun onBindViewHolder(holder: MyHomesViewHolder, position: Int) {
         val phone = listOfPhones[position]
         holder.binding.apply {
+            titlePhone.text=phone.title
+            sPerMega.text=phone.subtitle
+
             Glide.with(holder.itemView)
                 .load(phone.picture)
                 //   .centerCrop()
                 .into(imageView3)
+
+            if (phone.isNew == true) {
+                newIconImage.visibility = View.VISIBLE
+                newIconText.visibility = View.VISIBLE
+            } else {
+                newIconImage.visibility = View.INVISIBLE
+                newIconText.visibility = View.INVISIBLE
+
+            }
+
+            if (phone.isBuy == true) {
+                rectangle8.visibility = View.VISIBLE
+            } else { rectangle8.visibility = View.INVISIBLE
+            }
         }
     }
 
