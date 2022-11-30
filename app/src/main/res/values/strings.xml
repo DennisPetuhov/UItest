@@ -12,4 +12,13 @@
     <string name="some_id">$1,047</string>
     <string name="some_id1">$1,500</string>
     <string name="samsung_gal">Samsung Galaxy s20 Ultra</string>
+
+    <string-array name="locations">
+        <item>Nicosia</item>
+        <item>Kyrinea</item>
+        <item>Paphos</item>
+        <item>Limasol</item>
+        <item>Famagusta</item>
+        <item>Nizhny Novgorod</item>
+    </string-array>
 </resources>

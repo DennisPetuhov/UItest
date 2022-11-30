@@ -8,6 +8,7 @@
     tools:context=".presentetion.PhonesFragment">
 
 
+<<<<<<< HEAD
 
 
         <com.google.android.material.textfield.TextInputLayout
@@ -37,6 +38,8 @@
         </com.google.android.material.textfield.TextInputLayout>
 
 
+=======
+>>>>>>> spinnerUp
     <TextView
         android:id="@+id/see_more2"
         android:layout_width="64dp"
