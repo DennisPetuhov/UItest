@@ -2,27 +2,25 @@ package com.example.ui.presentetion
 
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.inputmethod.InputBinding
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.ui.DATA.Api.Status
-import com.example.ui.R
 import com.example.ui.databinding.FragmentPhonesBinding
 import com.example.ui.presentetion.Navigator.BaseFragment
 import com.example.ui.presentetion.RecyclerAdapter.HorizontalRecyclerAdapter
-import kotlinx.coroutines.flow.collect
+import com.example.ui.presentetion.RecyclerAdapter.VerticalRecyclerAdapter
 import kotlinx.coroutines.launch
 
 class PhonesFragment : BaseFragment()  {
     lateinit var binding: FragmentPhonesBinding
-    val adapter= HorizontalRecyclerAdapter()
+    val adapterHorizontal= HorizontalRecyclerAdapter()
+    val adapterVertical= VerticalRecyclerAdapter()
 
     companion object {
         fun newInstance() = PhonesFragment()
@@ -62,7 +60,8 @@ class PhonesFragment : BaseFragment()  {
                         }
                         Status.SUCCESS -> {
                             it.data?.let {
-                                it.homeStore?.let { it1 -> adapter.updateRecycler(it1.toMutableList()) }
+                                it.homeStore?.let { it1 -> adapterHorizontal.updateRecycler(it1.toMutableList()) }
+                                it.bestSeller?.let { it1 -> adapterVertical.updateRecycler(it1.toMutableList()) }
 //                                println(it1.bestSeller.toString())
 //                                println("success")
                             }
@@ -83,8 +82,10 @@ class PhonesFragment : BaseFragment()  {
     fun initRecycler() {
 
 
-        binding.horizontalRecycler.adapter = adapter
+        binding.horizontalRecycler.adapter = adapterHorizontal
         binding.horizontalRecycler.layoutManager = LinearLayoutManager(requireContext(),LinearLayoutManager.HORIZONTAL,false)
+        binding.verticalRecycler.adapter=adapterVertical
+        binding.verticalRecycler.layoutManager = GridLayoutManager(requireContext(),2)
 
     }
 }
