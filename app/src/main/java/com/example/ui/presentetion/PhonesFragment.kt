@@ -38,7 +38,7 @@ class PhonesFragment : BaseFragment()  {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(PhonesFragmentViewModel::class.java)
+        viewModel = ViewModelProvider(requireActivity()).get(PhonesFragmentViewModel::class.java)
         toRecycler()
         // TODO: Use the ViewModel
     }

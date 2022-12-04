@@ -8,6 +8,8 @@ import android.widget.Spinner
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import com.example.ui.databinding.ActivityMainBinding
+import com.example.ui.presentetion.BottomSheet.BottomSheetDialogFragment
+import com.example.ui.presentetion.BottomSheet.BottomSheetViewModel
 import com.example.ui.presentetion.TabLayout.TabObject
 import com.example.ui.presentetion.TabLayout.TabObjectData
 import com.example.ui.presentetion.TabLayout.ViewPagerAdapter
@@ -29,9 +31,19 @@ class MainActivity : AppCompatActivity() {
         setContentView(view)
         initPager(listOfTabs)
         initSpinner(        )
+        bottomSheet()
+
 //        val navHost =
 //            supportFragmentManager.findFragmentById(androidx.navigation.fragment.R.id.nav_host_fragment_container) as NavHostFragment
 //        navController = navHost.navController
+    }
+    fun bottomSheet(){
+        binding.button1.setOnClickListener {
+            val bottomSheet =BottomSheetDialogFragment()
+            bottomSheet.show(getSupportFragmentManager(),
+                "ModalBottomSheet")
+
+        }
     }
 
     private fun initSpinner() {

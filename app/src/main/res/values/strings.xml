@@ -21,4 +21,40 @@
         <item>Famagusta</item>
         <item>Nizhny Novgorod</item>
     </string-array>
+
+
+    <string-array name="brand_spinner">
+        <item>Select Brand</item>
+        <item>Iphone</item>
+        <item>Samsung</item>
+        <item>Xiaomi</item>
+    </string-array>
+
+    <string-array name="price_spinner">
+        <item>Select Price</item>
+        <item>$0 - $300</item>
+        <item>$300 - $500</item>
+        <item>$500 - $10000</item>
+    </string-array>
+
+    <string-array name="size_spinner">
+        <item>Select Size</item>
+        <item>4.5 to 5.5 inches</item>
+        <item>5.5 to 6.5 inches</item>
+        <item>6.5 to 7.5 inches</item>
+    </string-array>
+    <string name="done">Done</string>
+    <string name="filter_opti">
+
+Filter options
+</string>
+
+    <string name="brand_price">
+
+Brand \nPrice\nSize
+</string>
+    <string name="brand" />
+    <string name="price" />
+    <string name="size" />
+
 </resources>

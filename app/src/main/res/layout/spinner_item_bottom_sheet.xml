@@ -4,27 +4,19 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <ImageView
-        android:id="@+id/imageLocation"
-        android:layout_width="32dp"
-        android:layout_height="32dp"
-        android:src="@drawable/geo_position"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+
 
     <TextView
-        android:id="@+id/textLocation"
-        android:layout_width="wrap_content"
+        android:id="@+id/text_bottom_sheet_spinner"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:gravity="center_horizontal|top"
-        android:text="Kyrenia"
+        android:text="$"
         android:textAppearance="@style/zihuatanejo"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/imageArrow"
-        app:layout_constraintHorizontal_weight="@integer/material_motion_duration_long_1"
-        app:layout_constraintStart_toEndOf="@+id/imageLocation"
+        app:layout_constraintEnd_toStartOf="@id/imageArrow"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
@@ -37,5 +29,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

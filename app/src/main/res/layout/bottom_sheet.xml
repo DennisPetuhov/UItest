@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+
+    android:background="@drawable/bottom_sheet_background"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="80dp">
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="37dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="45dp"
+        android:background="@drawable/button_blue"
+        android:src="@drawable/bottom_sheet_cross_button_white"
+        app:layout_constraintBottom_toBottomOf="@+id/orange_button_done"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/orange_button_done"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/bottom_sheet_orange_button"
+        android:text="@string/done"
+        android:textAlignment="center"
+        android:textAppearance="@style/done"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/filter_options"
+        android:layout_width="114dp"
+        android:layout_height="23dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="24dp"
+        android:gravity="center_horizontal|top"
+        android:text="@string/filter_opti"
+        android:textAppearance="@style/filter_opti"
+        app:layout_constraintBottom_toBottomOf="@+id/orange_button_done"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/size"
+        android:textAppearance="@style/brand_price"
+        app:layout_constraintStart_toStartOf="@+id/spinner_price"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_price" />
+
+    <TextView
+        android:id="@+id/brand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/brand"
+        android:textAppearance="@style/brand_price"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/filter_options" />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/price"
+        android:textAppearance="@style/brand_price"
+        app:layout_constraintStart_toStartOf="@+id/spinner_brand"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_brand" />
+
+    <Spinner
+        android:id="@+id/spinner_brand"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+
+        android:popupBackground="@color/white"
+        android:entries="@array/brand_spinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/white"
+        app:layout_constraintStart_toStartOf="@+id/brand"
+        app:layout_constraintTop_toBottomOf="@+id/brand" />
+
+    <Spinner
+        android:id="@+id/spinner_size"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:popupBackground="@color/white"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:entries="@array/price_spinner"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/size"
+        app:layout_constraintTop_toBottomOf="@+id/size"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Spinner
+        android:id="@+id/spinner_price"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="32dp"
+        android:background="@color/white"
+        android:popupBackground="@color/white"
+        android:popupElevation="20dp"
+        android:entries="@array/size_spinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/price"
+        app:layout_constraintTop_toBottomOf="@+id/price" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

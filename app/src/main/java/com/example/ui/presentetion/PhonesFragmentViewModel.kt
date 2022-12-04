@@ -19,8 +19,7 @@ class PhonesFragmentViewModel : BaseViewModel() {
     val api = ApiHelper().getInstanceOfRetrofit()
     val repo = RepositoryPhones(api)
 
-    val flow: StateFlow<StatusModel<StoreResponse>>get() = mutableFlow
-
+    val flow: StateFlow<StatusModel<StoreResponse>> get() = mutableFlow
 
 
     var mutableFlow = MutableStateFlow(
@@ -38,6 +37,8 @@ class PhonesFragmentViewModel : BaseViewModel() {
     init {
         getMovies()
     }
+
+
     fun getMovies() {
         mutableFlow.value = StatusModel.loading()
         viewModelScope.launch(Dispatchers.IO) {
@@ -54,4 +55,23 @@ class PhonesFragmentViewModel : BaseViewModel() {
         }
     }
 
+
+    fun getFilterPrice(pair: Pair<Int, Int>) {
+        viewModelScope.launch {
+            val a = mutableFlow.value.data?.bestSeller?.filter {
+                pair.first <= it.discountPrice!! && it.discountPrice <= pair.second
+            }
+//            mutableFlow.value.data?.bestSeller=a
+            println("*** $a")
+
+        }
+    }
+//    fun getFilterName(name: String){
+//        viewModelScope.launch {
+//            _filter.value.name =name
+//        }
+//    }
+
 }
+
+
