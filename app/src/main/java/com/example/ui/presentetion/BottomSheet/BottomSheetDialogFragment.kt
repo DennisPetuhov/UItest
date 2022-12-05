@@ -18,7 +18,6 @@ import com.example.ui.presentetion.PhonesFragmentViewModel
 import com.example.ui.presentetion.spinner.SpinnerAdapterBrand
 import com.example.ui.presentetion.spinner.SpinnerAdapterPrice
 import com.example.ui.presentetion.spinner.SpinnerAdapterSize
-import kotlinx.coroutines.launch
 
 
 // TODO: Customize parameter argument names
@@ -95,7 +94,7 @@ class BottomSheetDialogFragment : BottomSheetDialogFragment() {
             ) {
 //                vm.print()
                 vm.getFilterPrice(priceList[position])
-                println("!!!!!!++++${vm.flow.value.data?.bestSeller}")
+                println("!!!!!!++++${vm.flowOuter.value.data?.bestSeller}")
             }
 
             override fun onNothingSelected(parent: AdapterView<*>?) {

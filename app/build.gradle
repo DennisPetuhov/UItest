@@ -96,4 +96,10 @@ dependencies {
     kapt "com.github.bumptech.glide:compiler:4.13.0"
 //Swipe
     implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
+
+    //   implementation 'androidx.navigation:navigation-safe-args-gradle-plugin:2.5.2'
+
+
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.5.3'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.5.3'
 }
