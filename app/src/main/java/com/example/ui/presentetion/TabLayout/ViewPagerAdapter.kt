@@ -4,10 +4,7 @@ import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.Lifecycle
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.example.ui.HealthFragment
-import com.example.ui.presentetion.ComputerFragment
-import com.example.ui.presentetion.BooksFragment
 import com.example.ui.presentetion.Navigator.BaseFragment
-import com.example.ui.presentetion.PhonesFragment
 
 //Create a class extending from FragmentStateAdapter to swipe Fragments
 class ViewPagerAdapter(fragmentManager: FragmentManager, lifecycle: Lifecycle) :

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentetion.DeteailsFragment">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background_color">
+
+        <com.google.android.material.button.MaterialButton
+
+            android:id="@+id/materialButton2"
+            android:layout_width="37dp"
+            android:layout_height="37dp"
+            android:background="@drawable/deteails_under_arrow"
+            app:backgroundTint="@color/darkblue"
+            app:icon="@drawable/deteils_arrow"
+            app:iconGravity="textStart"
+            app:iconPadding="0dp"
+            app:iconTint="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/product_det"
+            android:layout_width="133dp"
+            android:layout_height="23dp"
+            android:layout_alignParentTop="true"
+            android:gravity="center_horizontal|top"
+            android:text="@string/product_det"
+            android:textAppearance="@style/product_det"
+            app:layout_constraintEnd_toStartOf="@+id/materialButton"
+            app:layout_constraintStart_toEndOf="@+id/materialButton2"
+            tools:layout_editor_absoluteY="14dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/materialButton"
+            android:layout_width="37dp"
+            android:layout_height="37dp"
+            android:layout_marginEnd="52dp"
+            android:background="@drawable/deteils_bag_background"
+            android:backgroundTint="@color/orange"
+            app:icon="@drawable/deteails_bag_button"
+            app:iconPadding="0dp"
+            app:iconTint="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/details_pager"
+            android:layout_width="0dp"
+            android:layout_height="349dp"
+            android:layout_marginTop="50dp"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:overScrollMode="never"
+            android:paddingHorizontal="50dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/product_det" />
+
+        <androidx.cardview.widget.CardView
+
+            android:layout_width="0dp"
+            android:layout_height="470dp"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/deteilas_background_card"
+            app:cardCornerRadius="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/details_pager"
+
+
+        />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
+

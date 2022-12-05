@@ -44,17 +44,12 @@
         <item>6.5 to 7.5 inches</item>
     </string-array>
     <string name="done">Done</string>
-    <string name="filter_opti">
+    <string name="filter_opti">Filter options</string>
 
-Filter options
-</string>
-
-    <string name="brand_price">
-
-Brand \nPrice\nSize
-</string>
+    <string name="brand_price">Brand \nPrice\nSize</string>
     <string name="brand" />
     <string name="price" />
     <string name="size" />
 
+    <string name="product_det">Product Details</string>
 </resources>

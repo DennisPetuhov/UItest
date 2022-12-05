@@ -8,24 +8,24 @@ import android.view.ViewGroup
 import com.example.ui.R
 import com.example.ui.presentetion.Navigator.BaseFragment
 
-class ComputerFragment : BaseFragment()  {
+class DeteailsFragment : BaseFragment() {
 
     companion object {
-        fun newInstance() = ComputerFragment()
+        fun newInstance() = DeteailsFragment()
     }
 
-    private lateinit var viewModel: ComputerFragmentViewModel
+    private lateinit var viewModel: DeteailsViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_home2, container, false)
+        return inflater.inflate(R.layout.fragment_deteails, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(ComputerFragmentViewModel::class.java)
+        viewModel = ViewModelProvider(this).get(DeteailsViewModel::class.java)
         // TODO: Use the ViewModel
     }
 

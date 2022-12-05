@@ -13,7 +13,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.ui.R
 
 import com.example.ui.databinding.BottomSheetBinding
-import com.example.ui.presentetion.PhonesFragmentViewModel
+import com.example.ui.presentetion.TabLayout.PhonesFragmentViewModel
 
 import com.example.ui.presentetion.spinner.SpinnerAdapterBrand
 import com.example.ui.presentetion.spinner.SpinnerAdapterPrice
