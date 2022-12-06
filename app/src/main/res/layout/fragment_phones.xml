@@ -1,16 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentetion.PhonesFragment">
+    android:background="@color/background_color"
+    tools:context=".presentetion.TabLayout.PhonesFragment">
 
+
+
+
+
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/search_bar"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/hot_sales"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            app:queryHint="Search"
+            app:iconifiedByDefault="false"
+            android:layout_marginTop="16dp"
+            app:circularflow_radiusInDP="13dp"
+            android:background="@color/white"
+            android:actionViewClass="android.support.v7.widget.SearchView"
+            />
     <TextView
         android:id="@+id/see_more2"
         android:layout_width="64dp"
         android:layout_height="19dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="8dp"
         android:gravity="center_horizontal|top"
@@ -18,7 +40,7 @@
         android:textAppearance="@style/see_more"
         app:layout_constraintBottom_toTopOf="@+id/horizontal_recycler"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/search_bar" />
 
     <TextView
         android:id="@+id/hot_sales"
@@ -34,24 +56,25 @@
         android:textColor="#010035"
         app:layout_constraintBottom_toTopOf="@+id/horizontal_recycler"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/search_bar" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/horizontal_recycler"
         android:layout_width="0dp"
         android:layout_height="182dp"
+        android:layout_marginTop="8dp"
         android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toTopOf="@+id/see_more"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hot_sales"
         tools:listitem="@layout/horizontal_recycler_layout" />
 
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/vertical_recycler"
-        android:layout_width="wrap_content"
-        android:layout_height="300dp"
-        android:layout_marginEnd="211dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

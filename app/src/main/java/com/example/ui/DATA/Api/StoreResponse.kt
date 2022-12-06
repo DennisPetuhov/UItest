@@ -8,7 +8,7 @@ import kotlinx.parcelize.Parcelize
 
 data class StoreResponse(
     @Json(name ="best_seller")
-    val bestSeller: List<BestSeller>?,
+    var bestSeller: List<BestSeller>?,
     @Json(name ="home_store")
     val homeStore: List<HomeStore>?
 ):Parcelable

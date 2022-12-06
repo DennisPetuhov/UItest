@@ -2,7 +2,7 @@
     <!-- Base application theme. -->
     <style name="Theme.UI" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">#FFFFFF</item>
+        <item name="colorPrimary">#F5F5F5</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
         <item name="colorOnPrimary">@color/purple_200</item>
         <!-- Secondary brand color. -->
@@ -13,71 +13,8 @@
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
-
-    <style name="buy_now_">
-        <item name="android:textSize">11sp</item>
-
-        <item name="android:letterSpacing">-0.03</item>
-
-        <item name="android:textColor">#010035</item>
-
+    <style name="TransparentBackgroundBottomSheet"  parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="android:colorBackground">@android:color/transparent</item>
     </style>
 
-    <style name="s_per_mega_">
-        <item name="android:textSize">11sp</item>
-        <item name="android:letterSpacing">-0.03</item>
-        <item name="android:textColor">#FFFFFF</item>
-
-    </style>
-
-    <style name="new_icon">
-        <item name="android:textSize">10sp</item>
-        <item name="android:letterSpacing">-0.03</item>
-
-        <item name="android:textColor">#FFFFFF</item>
-
-    </style>
-
-    <style name="hot_sales">
-        <item name="android:textSize">25sp</item>
-        <item name="android:letterSpacing">-0.01</item>
-        <item name="android:textColor">#010035</item>
-
-    </style>
-
-    <style name="best_seller">
-        <item name="android:textSize">25sp</item>
-        <item name="android:letterSpacing">-0.01</item>
-        <item name="android:textColor">#010035</item>
-
-    </style>
-
-    <style name="see_more">
-        <item name="android:textSize">15sp</item>
-        <item name="android:letterSpacing">-0.02</item>
-        <item name="android:textColor">#FF6E4E</item>
-    </style>
-
-    <style name="samsung_gal">
-        <item name="android:textSize">10sp</item>
-        <item name="android:letterSpacing">-0.03</item>
-        <item name="android:textColor">#010035</item>
-
-    </style>
-
-    <style name="some_id1">
-        <item name="android:textSize">10sp</item>
-
-        <item name="android:letterSpacing">-0.03</item>
-
-        <item name="android:textColor">#CCCCCC</item>
-
-    </style>
-
-    <style name="some_id">
-        <item name="android:textSize">16sp</item>
-        <item name="android:letterSpacing">-0.02</item>
-        <item name="android:textColor">#010035</item>
-
-    </style>
 </resources>
