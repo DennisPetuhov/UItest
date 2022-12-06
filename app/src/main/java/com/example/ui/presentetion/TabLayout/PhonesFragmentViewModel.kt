@@ -31,9 +31,9 @@ class PhonesFragmentViewModel : BaseViewModel() {
 //        )
 //    )
 
-    init {
-        getPhones()
-    }
+//    init {
+//        getPhones()
+//    }
 
 
     fun getPhones() {

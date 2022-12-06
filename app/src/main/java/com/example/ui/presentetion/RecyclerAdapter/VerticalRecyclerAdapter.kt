@@ -44,9 +44,10 @@ class VerticalRecyclerAdapter : RecyclerView.Adapter<ViewHolderVertical>() {
 
         }
         holder.itemView.setOnClickListener{
+            holder.binding.phoneHolder.findNavController().navigate(R.id.action_phonesFragment_to_deteailsFragment)
 
 
-            holder.binding.phoneHolder.findNavController().navigate(R.id.action_phonesFragment_to_deteailsFragment,null)
+//            holder.binding.phoneHolder.findNavController().navigate(R.id.action_phonesFragment_to_deteailsFragment,null)
         }
 
     }

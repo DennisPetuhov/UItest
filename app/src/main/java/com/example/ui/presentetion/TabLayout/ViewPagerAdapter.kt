@@ -14,6 +14,7 @@ class ViewPagerAdapter(fragmentManager: FragmentManager, lifecycle: Lifecycle) :
 
     override fun getItemCount(): Int {
         return 4
+
     }
 
     //    createFragment(position: Int): This method returns a Fragment instance for the given position.

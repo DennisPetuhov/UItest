@@ -11,7 +11,7 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.example.ui.databinding.ActivityMainBinding
 import com.example.ui.presentetion.BottomSheet.BottomSheetDialogFragment
-import com.example.ui.presentetion.BottomSheet.BottomSheetViewModel
+
 import com.example.ui.presentetion.TabLayout.TabObject
 import com.example.ui.presentetion.TabLayout.TabObjectData
 import com.example.ui.presentetion.TabLayout.ViewPagerAdapter
@@ -36,6 +36,11 @@ class MainActivity : AppCompatActivity() {
         bottomSheet()
         bottomNavigation()
 
+
+        val navHost = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
+        val navController = navHost.navController
+//        navController.navigate(R.id.action_phonesFragment_to_deteailsFragment)
+
 //        val navHost =
 //            supportFragmentManager.findFragmentById(androidx.navigation.fragment.R.id.nav_host_fragment_container) as NavHostFragment
 //        navController = navHost.navController
@@ -51,7 +56,7 @@ class MainActivity : AppCompatActivity() {
     fun bottomNavigation() {
 
         val navHostFragment =
-            supportFragmentManager.findFragmentById(R.id.mmm) as NavHostFragment
+            supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         val navController = navHostFragment.navController
 
         binding.bottomNavigationView.setupWithNavController(navController)}
