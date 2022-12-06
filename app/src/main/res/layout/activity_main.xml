@@ -42,7 +42,15 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/mmm"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:defaultNavHost="true"
+        app:layout_constraintBottom_toBottomOf="@+id/viewPager"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:navGraph="@navigation/my_navgraph" />
 
 
     <com.google.android.material.tabs.TabLayout
@@ -56,7 +64,7 @@
         app:tabIndicatorColor="@color/white"
         app:tabSelectedTextColor="@color/white"
         app:tabTextColor="@color/black"
-        tools:listitem="@layout/tab_item_layout"/>
+        tools:listitem="@layout/tab_item_layout" />
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/viewPager"
@@ -72,18 +80,18 @@
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"
+        style="@style/TransparentBackgroundBottomSheet"
         android:layout_width="409dp"
         android:layout_height="0dp"
-        style="@style/TransparentBackgroundBottomSheet"
         android:layout_marginStart="1dp"
         android:layout_marginEnd="1dp"
         android:layout_marginBottom="1dp"
         android:background="@drawable/bottom_nav"
+        app:itemIconTint="@color/white"
+        app:labelVisibilityMode="unlabeled"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:labelVisibilityMode="unlabeled"
         app:layout_constraintStart_toStartOf="parent"
-        app:itemIconTint="@color/white"
-        app:menu="@menu/bottom_menu"/>
+        app:menu="@menu/bottom_menu" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

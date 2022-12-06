@@ -7,6 +7,8 @@ import android.widget.ImageView
 import android.widget.Spinner
 import android.widget.TextView
 import androidx.core.content.ContextCompat
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.setupWithNavController
 import com.example.ui.databinding.ActivityMainBinding
 import com.example.ui.presentetion.BottomSheet.BottomSheetDialogFragment
 import com.example.ui.presentetion.BottomSheet.BottomSheetViewModel
@@ -32,6 +34,7 @@ class MainActivity : AppCompatActivity() {
         initPager(listOfTabs)
         initSpinner(        )
         bottomSheet()
+        bottomNavigation()
 
 //        val navHost =
 //            supportFragmentManager.findFragmentById(androidx.navigation.fragment.R.id.nav_host_fragment_container) as NavHostFragment
@@ -45,6 +48,13 @@ class MainActivity : AppCompatActivity() {
 
         }
     }
+    fun bottomNavigation() {
+
+        val navHostFragment =
+            supportFragmentManager.findFragmentById(R.id.mmm) as NavHostFragment
+        val navController = navHostFragment.navController
+
+        binding.bottomNavigationView.setupWithNavController(navController)}
 
     private fun initSpinner() {
         val cityList=resources.getStringArray(R.array.locations)

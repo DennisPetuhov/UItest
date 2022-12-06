@@ -1,6 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/my_navgraph">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_navgraph"
+    app:startDestination="@id/phonesFragment">
 
+    <fragment
+        android:id="@+id/phonesFragment"
+        android:name="com.example.ui.presentetion.TabLayout.PhonesFragment"
+        android:label="fragment_phones"
+        tools:layout="@layout/fragment_phones" >
+        <action
+            android:id="@+id/action_phonesFragment_to_deteailsFragment"
+            app:destination="@id/deteailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/deteailsFragment"
+        android:name="com.example.ui.presentetion.DeteailsFragment"
+        android:label="fragment_deteails"
+        tools:layout="@layout/fragment_deteails" />
+    <fragment
+        android:id="@+id/baseFragment"
+        android:name="com.example.ui.presentetion.Navigator.BaseFragment"
+        android:label="fragment_base"
+        tools:layout="@layout/fragment_base" />
 </navigation>

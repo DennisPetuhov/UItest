@@ -53,4 +53,7 @@
 
     <string name="product_det">Product Details</string>
     <string name="galaxy_note">Galaxy Note 20 Ultra</string>
+    <string name="select_colo">\u000DSelect color and capacity</string>
+
+    <string name="btn_add_to_cart_text">Add to Cart \u0020\u0020\u0020 "$"%1$s</string>
 </resources>

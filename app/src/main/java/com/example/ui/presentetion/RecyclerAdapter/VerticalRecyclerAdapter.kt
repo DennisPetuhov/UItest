@@ -1,15 +1,12 @@
 package com.example.ui.presentetion.RecyclerAdapter
-
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.ui.DATA.Api.BestSeller
-import com.example.ui.DATA.Api.HomeStore
 import com.example.ui.R
-import com.example.ui.databinding.HorizontalRecyclerLayoutBinding
 import com.example.ui.databinding.VerticalRecyclerLayoutBinding
 import java.text.DecimalFormat
 
@@ -45,6 +42,11 @@ class VerticalRecyclerAdapter : RecyclerView.Adapter<ViewHolderVertical>() {
             discountPrice.text="$${formatOfPrice.format(phone.discountPrice)}"
 
 
+        }
+        holder.itemView.setOnClickListener{
+
+
+            holder.binding.phoneHolder.findNavController().navigate(R.id.action_phonesFragment_to_deteailsFragment,null)
         }
 
     }
