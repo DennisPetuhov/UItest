@@ -102,8 +102,8 @@ class MainActivity : AppCompatActivity() {
             }
 
         }.attach()
-        binding.viewPager.isUserInputEnabled = false // выключение скрола свайпом
-
+//        binding.viewPager.isUserInputEnabled = false // выключение скрола свайпом
+//
         binding.tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
             override fun onTabSelected(tab: TabLayout.Tab?) {
                 tab?.customView?.apply {
