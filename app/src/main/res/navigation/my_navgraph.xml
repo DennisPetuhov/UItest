@@ -20,8 +20,8 @@
         android:label="fragment_deteails"
         tools:layout="@layout/fragment_deteails" />
     <fragment
-        android:id="@+id/baseFragment"
-        android:name="com.example.ui.presentetion.Navigator.BaseFragment"
-        android:label="fragment_base"
-        tools:layout="@layout/fragment_base" />
+        android:id="@+id/computerFragment"
+        android:name="com.example.ui.presentetion.TabLayout.ComputerFragment"
+        android:label="fragment_home2"
+        tools:layout="@layout/fragment_home2" />
 </navigation>

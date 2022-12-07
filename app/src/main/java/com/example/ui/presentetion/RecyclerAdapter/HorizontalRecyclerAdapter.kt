@@ -6,7 +6,6 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.ui.DATA.Api.BestSeller
 import com.example.ui.DATA.Api.HomeStore
 import com.example.ui.databinding.HorizontalRecyclerLayoutBinding
 
@@ -54,9 +53,9 @@ class HorizontalRecyclerAdapter : RecyclerView.Adapter<MyHomesViewHolder>() {
     }
 
 
-    fun updateRecycler(list: MutableList<HomeStore>) {
+    fun updateRecyclerHorizontal(list: MutableList<HomeStore>) {
         list.toMutableList()
-        val diffcallback = Diffutill(listOfPhones, list)
+        val diffcallback = DiffUtiLLHorizontal(listOfPhones, list)
         val differense = DiffUtil.calculateDiff(diffcallback, true)
         listOfPhones = list
         differense.dispatchUpdatesTo(this)

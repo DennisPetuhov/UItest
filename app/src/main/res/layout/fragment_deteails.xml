@@ -150,15 +150,16 @@
                         android:text="Features" />
 
                 </com.google.android.material.tabs.TabLayout>
+
                 <ImageView
-                android:id="@+id/ivCpu"
-                android:layout_width="28dp"
-                android:layout_height="28dp"
-                android:layout_marginTop="33dp"
-                android:src="@drawable/groupcpu"
-                app:layout_constraintEnd_toStartOf="@id/ivCamera"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tabDetails" />
+                    android:id="@+id/ivCpu"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_marginTop="33dp"
+                    android:src="@drawable/groupcpu"
+                    app:layout_constraintEnd_toStartOf="@id/ivCamera"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tabDetails" />
 
                 <TextView
                     android:id="@+id/tvCpu"
@@ -246,36 +247,35 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tvCpu" />
 
-<!--                <androidx.recyclerview.widget.RecyclerView-->
-<!--                    android:id="@+id/rvSelectColor"-->
-<!--                    android:layout_width="125dp"-->
-<!--                    android:layout_height="41dp"-->
-<!--                    android:layout_marginStart="30dp"-->
-<!--                    android:layout_marginTop="14dp"-->
-<!--                    android:orientation="horizontal"-->
-<!--                    android:clipToPadding="false"-->
-<!--                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"-->
-<!--                    app:layout_constraintStart_toStartOf="parent"-->
-<!--                    app:layout_constraintTop_toBottomOf="@+id/tvSelectSpecs"-->
-<!--                    tools:listitem="@layout/item_select_color" />-->
+                <!--                <androidx.recyclerview.widget.RecyclerView-->
+                <!--                    android:id="@+id/rvSelectColor"-->
+                <!--                    android:layout_width="125dp"-->
+                <!--                    android:layout_height="41dp"-->
+                <!--                    android:layout_marginStart="30dp"-->
+                <!--                    android:layout_marginTop="14dp"-->
+                <!--                    android:orientation="horizontal"-->
+                <!--                    android:clipToPadding="false"-->
+                <!--                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"-->
+                <!--                    app:layout_constraintStart_toStartOf="parent"-->
+                <!--                    app:layout_constraintTop_toBottomOf="@+id/tvSelectSpecs"-->
+                <!--                    tools:listitem="@layout/item_select_color" />-->
 
-<!--                <androidx.recyclerview.widget.RecyclerView-->
-<!--                    android:id="@+id/rvSelectCapacity"-->
-<!--                    android:layout_width="150dp"-->
-<!--                    android:layout_height="31dp"-->
-<!--                    android:layout_marginLeft="58dp"-->
-<!--                    android:orientation="horizontal"-->
-<!--                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"-->
-<!--                    app:layout_constraintBottom_toBottomOf="@+id/rvSelectColor"-->
-<!--                    app:layout_constraintEnd_toEndOf="parent"-->
-<!--                    app:layout_constraintStart_toEndOf="@+id/rvSelectColor"-->
-<!--                    app:layout_constraintTop_toTopOf="@+id/rvSelectColor"-->
-<!--                    tools:listitem="@layout/item_selrct_capasity" />-->
+                <!--                <androidx.recyclerview.widget.RecyclerView-->
+                <!--                    android:id="@+id/rvSelectCapacity"-->
+                <!--                    android:layout_width="150dp"-->
+                <!--                    android:layout_height="31dp"-->
+                <!--                    android:layout_marginLeft="58dp"-->
+                <!--                    android:orientation="horizontal"-->
+                <!--                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"-->
+                <!--                    app:layout_constraintBottom_toBottomOf="@+id/rvSelectColor"-->
+                <!--                    app:layout_constraintEnd_toEndOf="parent"-->
+                <!--                    app:layout_constraintStart_toEndOf="@+id/rvSelectColor"-->
+                <!--                    app:layout_constraintTop_toTopOf="@+id/rvSelectColor"-->
+                <!--                    tools:listitem="@layout/item_selrct_capasity" />-->
 
                 <Button
                     android:id="@+id/btn_add_to_cart"
                     style="@style/add_to_cart"
-                    android:textSize="20sp"
                     android:layout_width="355dp"
                     android:layout_height="54dp"
                     android:layout_marginTop="25dp"
@@ -284,12 +284,11 @@
                     android:text="@string/btn_add_to_cart_text"
                     android:textAllCaps="false"
                     android:textColor="@color/white"
+                    android:textSize="20sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/rvSelectColor"
                     tools:text="Add to Cart  $1,500.00" />
-
-
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>

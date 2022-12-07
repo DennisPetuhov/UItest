@@ -8,6 +8,7 @@ import com.example.ui.presentetion.Navigator.BaseFragment
 
 //Create a class extending from FragmentStateAdapter to swipe Fragments
 class ViewPagerAdapter(fragmentManager: FragmentManager, lifecycle: Lifecycle) :
+//    FragmentStateAdapter(fragmentManager, lifecycle) {
     FragmentStateAdapter(fragmentManager, lifecycle) {
 
 //    getItemCount(): This method returns the total number of items in the Adapter.
@@ -23,7 +24,8 @@ class ViewPagerAdapter(fragmentManager: FragmentManager, lifecycle: Lifecycle) :
             0 -> PhonesFragment()
             1 -> ComputerFragment()
             2 -> HealthFragment()
-            else-> BooksFragment()
+            3-> BooksFragment()
+            else -> throw IllegalAccessError()
             
                 
         }

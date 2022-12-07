@@ -1,8 +1,9 @@
 package com.example.ui.presentetion.RecyclerAdapter
 
 import androidx.recyclerview.widget.DiffUtil
+import com.example.ui.DATA.Api.BestSeller
 
-class DiffUtillVertical<out V>(private val oldList:List<V>, private val newList:List<V>): DiffUtil.Callback() {
+class DiffUtillVertical(private val oldList:MutableList<BestSeller>, private val newList:MutableList<BestSeller>): DiffUtil.Callback() {
     override fun getOldListSize(): Int {
         return oldList.size
     }
@@ -12,7 +13,7 @@ class DiffUtillVertical<out V>(private val oldList:List<V>, private val newList:
     }
 
     override fun areItemsTheSame(oldItemPosition: Int, newItemPosition: Int): Boolean {
-        return oldList[oldItemPosition]==newList[newItemPosition]
+        return oldList[oldItemPosition].id==newList[newItemPosition].id
 
     }
 

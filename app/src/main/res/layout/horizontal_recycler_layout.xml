@@ -3,10 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mask_group"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_alignParentStart="true"
-    android:layout_alignParentTop="true"
+
     android:background="?android:attr/selectableItemBackgroundBorderless"
     app:cardCornerRadius="10dp"
     app:cardUseCompatPadding="true"
@@ -69,9 +68,6 @@
             app:layout_constraintEnd_toStartOf="@+id/guideline2"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
             android:gravity="center_horizontal|top"
             android:textAppearance="@style/iphone_12"
 

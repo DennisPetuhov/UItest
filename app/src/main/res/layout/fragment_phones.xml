@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,33 +8,29 @@
     tools:context=".presentetion.TabLayout.PhonesFragment">
 
 
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/search_bar"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="300dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="16dp"
+        android:actionViewClass="android.support.v7.widget.SearchView"
+        android:background="@color/white"
+        app:circularflow_radiusInDP="13dp"
+        app:iconifiedByDefault="false"
+        app:layout_constraintBottom_toTopOf="@id/hot_sales"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:queryHint="Search" />
 
-
-
-
-        <androidx.appcompat.widget.SearchView
-            android:id="@+id/search_bar"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/hot_sales"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="300dp"
-            android:layout_height="40dp"
-            app:queryHint="Search"
-            app:iconifiedByDefault="false"
-            android:layout_marginTop="16dp"
-            app:circularflow_radiusInDP="13dp"
-            android:background="@color/white"
-            android:actionViewClass="android.support.v7.widget.SearchView"
-            />
     <TextView
         android:id="@+id/see_more2"
         android:layout_width="64dp"
         android:layout_height="19dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="8dp"
-        android:gravity="center_horizontal|top"
+
         android:text="@string/see_more"
         android:textAppearance="@style/see_more"
         app:layout_constraintBottom_toTopOf="@+id/horizontal_recycler"
@@ -46,11 +41,9 @@
         android:id="@+id/hot_sales"
         android:layout_width="111dp"
         android:layout_height="32dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
-        android:gravity="center_horizontal|top"
+
         android:text="@string/hot_sales"
         android:textAppearance="@style/hot_sales"
         android:textColor="#010035"
@@ -62,8 +55,6 @@
         android:id="@+id/horizontal_recycler"
         android:layout_width="0dp"
         android:layout_height="182dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toTopOf="@+id/see_more"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -74,11 +65,12 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/vertical_recycler"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/barrier3"
+        app:layout_constraintTop_toTopOf="@id/barrier3"
+
         tools:listitem="@layout/vertical_recycler_layout" />
 
     <TextView
@@ -101,8 +93,6 @@
         android:id="@+id/see_more"
         android:layout_width="64dp"
         android:layout_height="19dp"
-
-
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="13dp"
@@ -118,7 +108,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:barrierDirection="bottom"
-        app:constraint_referenced_ids="see_more,see_more2,hot_sales,horizontal_recycler,best_seller"
-        />
+        app:constraint_referenced_ids="see_more,see_more2,hot_sales,horizontal_recycler,best_seller" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

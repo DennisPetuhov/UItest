@@ -56,9 +56,9 @@ class VerticalRecyclerAdapter : RecyclerView.Adapter<ViewHolderVertical>() {
         return listOfPhones.size
     }
 
-    fun updateRecycler(list: MutableList<BestSeller>) {
+    fun updateRecyclerVertical(list: MutableList<BestSeller>) {
         list.toMutableList()
-        val diffcallback = Diffutill(listOfPhones, list)
+        val diffcallback = DiffUtillVertical(listOfPhones, list)
         val differense = DiffUtil.calculateDiff(diffcallback, true)
         listOfPhones = list
         differense.dispatchUpdatesTo(this)
